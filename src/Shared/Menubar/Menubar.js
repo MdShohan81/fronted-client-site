@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.png'
 
 const Menubar = () => {
@@ -27,7 +28,7 @@ const Menubar = () => {
       <li><a href="">Manage product</a></li>
       <li><a href="">My product</a></li>
       <li><a href="">Add product</a></li>
-      <li><a href="">Login</a></li>
+      <li><Link to='/login'>Login</Link></li>
     </ul>
   </div>
   
