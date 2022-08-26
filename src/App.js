@@ -1,12 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
 import Menubar from './Shared/Menubar/Menubar';
+import Home from './Pages/Home/Home/Home';
+import {Routes, Route } from 'react-router-dom';
+import Footer from './Shared/Footer/Footer';
 
 function App() {
   return (
     <div>
       <Menubar></Menubar>
-        <h1 className='text-primary'>Hello man</h1>
+      <Routes>
+        <Route path='/' element={<Home></Home>}></Route>
+      </Routes>
+      <Footer></Footer>      
     </div>
   );
 }

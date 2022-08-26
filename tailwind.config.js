@@ -8,11 +8,11 @@ module.exports = {
         
 "primary": "#00BF8F",
         
-"secondary": "#EA5234",
+"secondary": "#E52D27",
         
-"neutral": "#333C4D",
+"neutral": "#777777",
         
-"base-100": "#FFFFFF",
+"base-100": "#F6F6F6",
         
 "info": "#3ABFF8",
         
