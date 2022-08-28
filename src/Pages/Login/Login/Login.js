@@ -27,8 +27,8 @@ const Login = () => {
     
       if(eLoading || loading){
         return <>
-            <div className='text-center mt-14'>
-        <progress class="progress w-56 text-center"></progress>
+            <div className='h-screen text-center my-14'>
+            <button class="btn loading">loading</button>
       </div>
         </>;
       }

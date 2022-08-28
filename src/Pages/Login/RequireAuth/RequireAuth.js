@@ -10,9 +10,9 @@ const RequireAuth = ({children}) => {
     
     if(loading){
         return <>
-            <div className='mx-auto mt-14'>
-             <progress class="progress w-56 text-center"></progress>
-            </div>
+            <div className='h-screen text-center my-14'>
+            <button class="btn loading">loading</button>
+      </div>
         </>;
     }
     if(!user){
