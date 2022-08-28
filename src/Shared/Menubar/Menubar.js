@@ -45,7 +45,7 @@ const Menubar = () => {
         <>
         <li><Link to='/manageinventory'>Manage Item</Link></li>
         <li><Link to='/myproduct'>My Item</Link></li>
-        <li><Link to='/addproduct'>Add Item</Link></li>
+        <li><Link to='/addinventory'>Add Item</Link></li>
         <li><Link to='/login' onClick={handleSignOut}>Signout </Link></li>
         </>
         :
