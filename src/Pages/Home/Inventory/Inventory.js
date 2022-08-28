@@ -1,17 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { Link } from 'react-router-dom';
+
 import InventoryCard from '../InventoryCard/InventoryCard';
 
 const Inventory = () => {
     const [cars, setCars] = useState([]);
     useEffect(() => {
-        fetch('service.json')
+        fetch(`http://localhost:4000/service`)
         .then(res => res.json())
         .then(data => setCars(data))
-    }, [])
+    },[])
+    
     return (
         <div className="my-16 mx-auto bg-base-100">
-            <h1 className='text-center md:text-3xl text-2xl font-bold'>Latest <span className='text-secondary'>Trending</span> Ads</h1>
+            <h1 className='text-center md:text-3xl text-2xl font-bold'>Latest <span className='text-secondary'>Trending</span> Cars</h1>
             <h2 className='text-center md:text-2xl text-xl font-normal text-neutral my-4'>Search your car in our Inventory and request a quote on the vehicle of your choosing.</h2>
             <div className='grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 gap-8 lg:mx-8 mt-16'>
                 {

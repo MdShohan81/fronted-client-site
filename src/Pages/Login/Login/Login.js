@@ -27,7 +27,7 @@ const Login = () => {
     
       if(eLoading || loading){
         return <>
-            <div className='mx-auto mt-14'>
+            <div className='text-center mt-14'>
         <progress class="progress w-56 text-center"></progress>
       </div>
         </>;

@@ -7,6 +7,7 @@ import auth from '../../../firebase.init';
 const RequireAuth = ({children}) => {
     const [user,loading] = useAuthState(auth);
     const location = useLocation();
+    
     if(loading){
         return <>
             <div className='mx-auto mt-14'>

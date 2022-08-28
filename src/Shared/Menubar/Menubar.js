@@ -24,10 +24,10 @@ const Menubar = () => {
       {
         user ?
         <>
-        <li><Link to='/manageproduct'>Manage product</Link></li>
-        <li><Link to='/myproduct'>My product</Link></li>
-        <li><Link to='/addproduct'>Add product</Link></li>
-        <li><Link to="/signout" onClick={handleSignOut}>Signout</Link></li>
+        <li><Link to='/manageproduct'>Manage Item</Link></li>
+        <li><Link to='/myproduct'>My Item</Link></li>
+        <li><Link to='/addproduct'>Add Item</Link></li>
+        <li><Link to="/login" onClick={handleSignOut}>Signout</Link></li>
         </>
         :
         <li><Link to='/login'>Login</Link></li>
@@ -43,10 +43,10 @@ const Menubar = () => {
       {
         user ?
         <>
-        <li><Link to='/manageproduct'>Manage product</Link></li>
-        <li><Link to='/myproduct'>My product</Link></li>
-        <li><Link to='/addproduct'>Add product</Link></li>
-        <li><Link to="/signout" onClick={handleSignOut}>Signout</Link></li>
+        <li><Link to='/manageproduct'>Manage Item</Link></li>
+        <li><Link to='/myproduct'>My Item</Link></li>
+        <li><Link to='/addproduct'>Add Item</Link></li>
+        <li><Link to='/login' onClick={handleSignOut}>Signout </Link></li>
         </>
         :
         <li><Link to='/login'>Login</Link></li>
