@@ -12,6 +12,8 @@ import InventoryDetail from './Pages/Home/InventoryDetail/InventoryDetail';
 import ManageInventory from './Pages/ManageInventory/ManageInventory';
 import AddInventory from './Pages/AddInventory/AddInventory';
 import NotFound from './Pages/NotFound/NotFound';
+import Order from './Pages/Order/Order';
+import MyItem from './Pages/MyItem/MyItem';
 
 function App() {
   return (
@@ -35,6 +37,8 @@ function App() {
         </RequireAuth>
         }></Route>
 
+        <Route path='/order/:serviceId' element={<Order></Order>}></Route>
+        <Route path='/myitem' element={<MyItem></MyItem>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams,Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 
@@ -88,7 +88,7 @@ const handleUpdateQuantity = event => {
                 <div class="flex justify-between items-center my-4">
                 <button onClick={handleReduceQuantity}  class="btn btn-md btn-secondary">Delivered</button>
                 </div>
-                
+                <Link to={`/order/${serviceId}`}><button className='btn btn-secondary my-3'>proceed checkout</button></Link>
             
                 <div>
                 <form onSubmit={handleUpdateQuantity}>

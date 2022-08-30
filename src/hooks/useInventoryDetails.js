@@ -1,14 +1,14 @@
 import{ useEffect, useState } from 'react';
 
-const useInventoryDetails = (inventoryId) => {
+const useInventoryDetails = (serviceId) => {
     const [cars, setCars] = useState({});
     useEffect( () => {
-        const url = `http://localhost:4000/service/${inventoryId}`;
+        const url = `http://localhost:4000/service/${serviceId}`;
         fetch(url)
         .then(res => res.json())
         .then(data => setCars(data));
 
-    }, [inventoryId])
+    }, [serviceId])
     return [cars, setCars];
 };
 
