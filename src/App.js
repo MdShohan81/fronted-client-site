@@ -14,6 +14,7 @@ import AddInventory from './Pages/AddInventory/AddInventory';
 import NotFound from './Pages/NotFound/NotFound';
 import Order from './Pages/Order/Order';
 import MyItem from './Pages/MyItem/MyItem';
+import Blogs from './Pages/Blogs/Blogs';
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
 
         <Route path='/order/:serviceId' element={<Order></Order>}></Route>
         <Route path='/myitem' element={<MyItem></MyItem>}></Route>
+        <Route path='/blog' element={<Blogs></Blogs>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>

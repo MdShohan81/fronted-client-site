@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useSignInWithGoogle, useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSignInWithGoogle, useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 
 const SignUp = () => {
@@ -21,31 +21,35 @@ const SignUp = () => {
         error,
       ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
 
+      const [updateProfile, updating, uError] = useUpdateProfile(auth);
+
     // user 
       if(user || gUser){
         navigate('/')
     }
 
     //Error handle
-    if (error || gError) {
+    if (error || gError || uError) {
       return (
         <div>
-          <p>Error: {error.message}</p>
+          <p>Error: {error?.message || gError?.message || uError?.message}</p>
         </div>
       );
     }
 
-  const signUpFormSubmit = event => {
+  const signUpFormSubmit = async event => {
     event.preventDefault();
     const name = nameRef.current.value;
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
-    createUserWithEmailAndPassword(email, password);
-    navigate('/')
+    await createUserWithEmailAndPassword(email, password);
+    await updateProfile({ displayName:  name});
+    console.log('updateProfile');
+    navigate('/');
     
 }
 
-if(loading || gLoading){
+if(loading || gLoading || updating){
   return <>
       <div className='mx-auto mt-14'>
         <progress class="progress w-56 text-center"></progress>

@@ -1,15 +1,16 @@
 import React, { useRef } from 'react';
 import { Link,  useLocation, useNavigate } from 'react-router-dom';
-import { useSignInWithGoogle, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import {  useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
-import { useForm } from "react-hook-form";
+
 import axios from 'axios';
+import Social from '../Social/Social';
 
 
 const Login = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
-    const [signInWithGoogle, user, loading] = useSignInWithGoogle(auth);
+    
     const navigate = useNavigate();
     const location = useLocation();
     let from = location.state?.from?.pathname || '/';
@@ -18,16 +19,16 @@ const Login = () => {
      //email password login
      const [
         signInWithEmailAndPassword,
-        eUser,
-        eLoading,
+        user,
+        loading,
       ] = useSignInWithEmailAndPassword(auth);
 
-    if(eUser || user ) {
+    if(user) {
       // navigate(from, { replace: true });
     }
 
     
-      if(eLoading || loading){
+      if(loading){
         return <>
             <div className='h-screen text-center my-14'>
             <button class="btn loading">loading</button>
@@ -44,6 +45,7 @@ const Login = () => {
         const password = passwordRef.current.value;
        await  signInWithEmailAndPassword(email, password);
        const {data}  = await axios.post('http://localhost:4000/login', {email});
+       console.log(data)
        localStorage.setItem('accessToken', data.accessToken);
        navigate(from, { replace: true });
 
@@ -85,9 +87,8 @@ const Login = () => {
         </form>
        
         <div class="divider">OR</div>
-        <div className="form-control mt-2">
-          <button onClick={() => signInWithGoogle()} className="btn btn-secondary">Login With Google</button>
-        </div>
+        {/* //Social login */}
+        <Social></Social>
       </div>
     </div>
   </div>
