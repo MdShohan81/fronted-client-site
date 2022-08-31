@@ -6,7 +6,7 @@ import InventoryCard from '../InventoryCard/InventoryCard';
 const Inventory = () => {
     const [cars, setCars] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:4000/service`)
+        fetch(`https://young-fjord-06594.herokuapp.com/service`)
         .then(res => res.json())
         .then(data => setCars(data))
     },[])

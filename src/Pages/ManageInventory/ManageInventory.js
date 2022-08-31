@@ -10,7 +10,7 @@ const ManageInventory = () => {
     const deleteInventory = id => {
         const proceed = window.confirm('are you sure');
         if(proceed){
-            const url =`http://localhost:4000/service/${id}`;
+            const url =`https://young-fjord-06594.herokuapp.com/service/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

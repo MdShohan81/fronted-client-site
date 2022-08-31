@@ -15,7 +15,7 @@ const MyItem = () => {
     useEffect( () =>{
         const getItems = async () =>{
         const email = user.email;
-         const url = `http://localhost:4000/order/?email=${email}`;
+         const url = `https://young-fjord-06594.herokuapp.com/order/?email=${email}`;
          const {data} = await axios.get(url, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem}`
@@ -31,7 +31,7 @@ const MyItem = () => {
     
 
     const handleDelete = id => {
-        fetch(`http://localhost:4000/order/${id}`, {
+        fetch(`https://young-fjord-06594.herokuapp.com/order/${id}`, {
             method: 'DELETE'
         })
         .then(res => res.json())

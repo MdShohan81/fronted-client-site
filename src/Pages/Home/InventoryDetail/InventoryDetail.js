@@ -8,7 +8,7 @@ const InventoryDetail = () => {
     const [cars, setCars] = useState({});
     const [update, setUpdate] = useState({})
     useEffect( () => {
-        const url = `http://localhost:4000/service/${serviceId}`;
+        const url = `https://young-fjord-06594.herokuapp.com/service/${serviceId}`;
         fetch(url)
         .then(res => res.json())
         .then(data => setCars(data))
@@ -20,7 +20,7 @@ const InventoryDetail = () => {
         if(cars.quantity > 0){
             const newQuantity = parseInt(cars.quantity) - 1;
             const updateQuantity = {quantity:newQuantity}
-            const url = `http://localhost:4000/service/${serviceId}`;
+            const url = `https://young-fjord-06594.herokuapp.com/service/${serviceId}`;
 
             fetch(url, {
                 method: 'PUT',
@@ -50,7 +50,7 @@ const handleUpdateQuantity = event => {
     event.preventDefault();
     const newQuantity = parseInt(cars.quantity) + parseInt(event.target.quantity.value);
     const updateQuantity = {quantity: newQuantity};
-    const url = `http://localhost:4000/service/${serviceId}`;
+    const url = `https://young-fjord-06594.herokuapp.com/service/${serviceId}`;
     fetch(url, {
      method: 'PUT',
      headers: {

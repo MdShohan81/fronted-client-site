@@ -3,7 +3,7 @@ import{ useEffect, useState } from 'react';
 const useInventoryDetails = (serviceId) => {
     const [cars, setCars] = useState({});
     useEffect( () => {
-        const url = `http://localhost:4000/service/${serviceId}`;
+        const url = `https://young-fjord-06594.herokuapp.com/service/${serviceId}`;
         fetch(url)
         .then(res => res.json())
         .then(data => setCars(data));

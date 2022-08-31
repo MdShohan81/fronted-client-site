@@ -22,7 +22,7 @@ const Order = () => {
       number: event.target.number.value,
       address: event.target.address.value
     }
-    axios.post('http://localhost:4000/order', order)
+    axios.post('https://young-fjord-06594.herokuapp.com/order', order)
     .then(response => {
       const {data} = response;
       if(data.insertedId){

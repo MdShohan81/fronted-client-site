@@ -6,7 +6,7 @@ const AddInventory = () => {
     const { register, handleSubmit } = useForm();
 
     const onSubmit = (data,event) => {
-        const url = `http://localhost:4000/service`;
+        const url = `https://young-fjord-06594.herokuapp.com/service`;
         fetch(url, {
           method: "POST",
           headers: {
