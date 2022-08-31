@@ -12,7 +12,9 @@ const About = () => {
                     Carspot is not only a hub where buyers and sellers can interact, it is also a comprehensive automotive portal with a forum dedicated to all automotive discussions, a blog that keeps the users up to date with the latest happenings in the automotive industry.
                     </p>
                 </div>
-                <div>
+                <div data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
                     <img src={about} className="w-full" alt="about-img"/>
                 </div>
                 </div>

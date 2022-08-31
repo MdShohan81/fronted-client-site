@@ -73,7 +73,8 @@ const handleUpdateQuantity = event => {
             <h1 className='text-2xl font-semibold my-4 first-letter:'>you choose this: <span className='text-secondary text-bold'>{cars.carname}</span></h1>
             <div className='grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4 my-8'>
                 {/* //details page img */}
-                <div className='card'>
+                <div className='card' data-aos="zoom-out-up"
+                data-aos-duration="3000">
                 <img src={cars.img} alt="img" class="rounded-xl" />
                 </div>
                 {/* details page information */}

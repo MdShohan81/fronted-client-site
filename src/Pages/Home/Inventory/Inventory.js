@@ -15,7 +15,9 @@ const Inventory = () => {
         <div className="my-16 mx-auto bg-base-100">
             <h1 className='text-center md:text-3xl text-2xl font-bold'>Latest <span className='text-secondary'>Trending</span> Cars</h1>
             <h2 className='text-center md:text-2xl text-xl font-normal text-neutral my-4'>Search your car in our Inventory and request a quote on the vehicle of your choosing.</h2>
-            <div className='grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 gap-8 lg:mx-8 mt-16'>
+            <div className='grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 gap-8 lg:mx-8 mt-16' data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="1000">
                 {
                     cars.slice(0,6).map(car => <InventoryCard
                     key={car._id}
