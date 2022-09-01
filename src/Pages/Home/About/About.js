@@ -3,7 +3,7 @@ import about from  '../../../assets/about.png'
 
 const About = () => {
     return (
-        <div className="py-16 mx-auto bg-white">
+        <div className="py-16 mx-auto bg-white px-2">
             <h1 className='md:text-3xl text-2xl text-center md:text-start font-bold lg:ml-32'>About <span className='text-secondary'>Car Spot</span> Dealership</h1>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
                 <div>
