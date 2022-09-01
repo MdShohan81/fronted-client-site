@@ -1,3 +1,34 @@
-.bg-img{
-    background-image: url('../../../assets/banner.jpg');
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+video{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+.banner-content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+.banner-overlay{
+    position: absolute;
+    top: 20;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    
+    
+
 }
